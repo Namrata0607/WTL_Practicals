@@ -1,0 +1,30 @@
+<company>
+   <staff>
+      <full_name>Namrata Daphale</full_name>
+      <job_title>Software Engineer</job_title>
+      <division>IT</division>
+      <joining_year>2015</joining_year>
+      <income>75000</income>
+   </staff>
+   <staff>
+      <full_name>Shamal Gaykwad</full_name>
+      <job_title>Project Manager</job_title>
+      <division>Management</division>
+      <joining_year>2012</joining_year>
+      <income>90000</income>
+   </staff>
+   <staff>
+      <full_name>Jyoti Patil</full_name>
+      <job_title>Data Analyst</job_title>
+      <division>Analytics</division>
+      <joining_year>2018</joining_year>
+      <income>68000</income>
+   </staff>
+   <staff>
+      <full_name>Vishval Fadatare</full_name>
+      <job_title>Data Analyst</job_title>
+      <division>Analytics</division>
+      <joining_year>2018</joining_year>
+      <income>68000</income>
+   </staff>
+</company>

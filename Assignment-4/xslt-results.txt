@@ -1,0 +1,21 @@
+
+        Name: Namrata Daphale
+        Position: Software Engineer
+        Department: IT
+        Hired in: 2015
+        Salary: 75000
+        Name: Shamal Gaykwad
+        Position: Project Manager
+        Department: Management
+        Hired in: 2012
+        Salary: 90000
+        Name: Jyoti Patil
+        Position: Data Analyst
+        Department: Analytics
+        Hired in: 2018
+        Salary: 68000
+        Name: Vishval Fadatare
+        Position: Data Analyst
+        Department: Analytics
+        Hired in: 2018
+        Salary: 68000

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<library>
+    <book>
+        <title>Introduction to XML</title>
+        <author>John Doe</author>
+        <price>29.99</price>
+    </book>
+    <book>
+        <title>Mastering XPath</title>
+        <author>Jane Smith</author>
+        <price>39.99</price>
+    </book>
+</library>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <name>Namrata Daphale</name>
+        <position>Software Engineer</position>
+        <department>IT</department>
+        <hire_year>2015</hire_year>
+        <salary>75000</salary>
+    </employee>
+    <employee>
+        <name>Shamal Gaykwad</name>
+        <position>Project Manager</position>
+        <department>Management</department>
+        <hire_year>2012</hire_year>
+        <salary>90000</salary>
+    </employee>
+    <employee>
+        <name>Jyoti Patil</name>
+        <position>Data Analyst</position>
+        <department>Analytics</department>
+        <hire_year>2018</hire_year>
+        <salary>68000</salary>
+    </employee>
+    <employee>
+        <name>Vishval Fadatare</name>
+        <position>Data Analyst</position>
+        <department>Analytics</department>
+        <hire_year>2018</hire_year>
+        <salary>68000</salary>
+    </employee>
+</employees>

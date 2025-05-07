@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Handling</title>
+</head>
+<body>
+    <form action="inputFile.php" method="post" enctype="multipart/form-data">
+        <label for="file">Choose a file:</label>
+        <input type="file" name="file" id="file" required>
+        <br><br>
+        <label for="operation">Select operation:</label>
+        <select name="operation" id="operation" required>
+            <option value="lines">Count Lines</option>
+            <option value="characters">Count Characters</option>
+            <option value="content">Display Content</option>
+        </select>
+        <br><br>
+        <button type="submit" name="submit">Submit</button>
+    </form>
+</body>
+</html>

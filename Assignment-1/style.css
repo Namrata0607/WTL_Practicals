@@ -1,0 +1,168 @@
+body {
+    background-color: white;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: rgb(38, 79, 166);
+    transition: transform 0.5s ease;
+}
+a:hover {
+    color: #ff0000;
+}
+a:active {
+    color: green;
+}
+
+hr {
+    color: rgb(151, 166, 38);
+    background-color: rgb(97, 123, 193);
+    height: 2px;
+}
+
+.outer, .b1 {
+    border-radius: 20px;
+    border: 2px solid rgb(38, 79, 166);
+    background-color: rgb(234, 239, 248);
+    margin-bottom: 20px;
+}
+
+.outer {
+    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 10px 5% 20px 5%;
+}
+
+.b1 {
+    width: 600px;
+    height: 800px;
+    padding: 20px 20px 20px 130px;
+    margin-left: 460px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+/* Descendant selector */
+.intro #name, 
+.intro #name::first-letter {
+    color: rgb(38, 79, 166);
+}
+
+h2, h3 {
+    color: rgb(38, 79, 166);
+}
+
+h2 {
+    margin-left: 70px;
+    margin-bottom: 30px;
+}
+h2::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: rgb(38, 79, 166);
+    margin-top: 10px;
+}
+h2::first-letter {
+    font-size: 30px;
+}
+
+/* Adjacent sibling selector */
+h2 + p {
+    font-weight: bold;
+}
+
+/* General sibling selector */
+h2 ~ p {
+    color: rgb(38, 79, 166);
+}
+
+img {
+    position: absolute;
+    top: 20px;
+    right: 380px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 1px solid rgb(38, 79, 166);
+    transition: transform 0.5s ease;
+}
+img:hover {
+    transform: scale(1.2);
+}
+
+
+p::first-line {
+    color: rgb(38, 79, 166);
+    font-size: 22px;
+}
+p::selection {
+    background-color: rgb(230, 255, 129);
+}
+
+/* child selector */
+::marker, ul > li {
+    color: rgb(38, 79, 166);
+    font-size: 22px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgb(211, 226, 254);
+    border-color: rgb(38, 79, 166);
+}
+table tr:first-child:hover {
+    background-color: rgb(38, 79, 166);
+    color: white;
+}
+
+/* regestration form */
+
+
+/* multiple selector */
+label, input {
+    margin-bottom: 10px;
+}
+label {
+    font-size: 17px;
+}
+
+/* Attribute selector */
+input[type="text"], 
+input[type="email"] {
+    height: 25px;
+    width: 300px;
+    margin-top: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border-color: white;
+}
+
+input[type="text"]:hover, 
+input[type="email"]:hover, 
+input[type="text"]:focus, 
+input[type="email"]:focus {
+    border-color: rgb(38, 79, 166);
+}
+input[type="text"]:focus, 
+input[type="email"]:focus {
+    box-shadow: 0 0 5px rgb(255, 25, 25);
+}
+
+#submit {
+    margin: 15px 0 15px 60px;
+    height: 40px;
+    width: 200px;
+    background-color: rgb(38, 79, 166);
+    color: white;
+    font-size: 15px;
+    transition: transform 0.5s ease;
+}
+#submit:hover {
+    transform: scale(1.1);
+    background-color: rgb(100, 132, 202);
+}

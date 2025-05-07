@@ -1,0 +1,43 @@
+/* pseudo */
+.div1{
+    border: 2px solid black;
+    height: 300px;
+    width: 400px;
+    padding: 50px;
+    margin: 50px 50px 50px 500px ;
+}
+/* .div1:hover {
+    background-color: rgb(196, 196, 253);
+  } */
+a:link {
+    color: red;
+}
+  
+a:visited {
+    color: green;
+}
+  
+a:hover {
+  color: hotpink;
+}
+  
+a:active {
+  color: blue;
+}
+a.highlight:hover {
+    color: yellow;
+    font-size: 50px;
+} 
+
+#p1 {
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+  }
+  
+  div:hover #p1 {
+    display: block;
+  }
+  p:first-child {
+    color: blue;
+  }     
