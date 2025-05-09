@@ -1,72 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      background-color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+      width: calc(50% - 10px);
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      padding: 12px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buttons button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
 </head>
+<body>
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
-    <div class="bg-white shadow-md rounded-md p-6 w-full max-w-md">
-        <h1 class="text-xl font-semibold text-center text-gray-800 mb-6">Simple Calculator</h1>
+<div class="container">
+  <h2>Simple Calculator</h2>
+  <div style="text-align: center;">
+    <input id="num1" type="number" placeholder="First Number">
+    <input id="num2" type="number" placeholder="Second Number">
+  </div>
 
-        <div class="grid grid-cols-2 gap-4 mb-4">
-            <div>
-                <label for="num1" class="block text-sm font-medium text-gray-700 mb-1">First Number</label>
-                <input id="num1" type="number" placeholder="0"
-                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
-            </div>
-            <div>
-                <label for="num2" class="block text-sm font-medium text-gray-700 mb-1">Second Number</label>
-                <input id="num2" type="number" placeholder="0"
-                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300">
-            </div>
-        </div>
+  <div class="buttons">
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">−</button>
+    <button onclick="calculate('*')">×</button>
+    <button onclick="calculate('/')">÷</button>
+    <button onclick="calculate('%')">%</button>
+    <button onclick="square()">x²</button>
+    <button onclick="clearFields()" style="grid-column: span 3; background-color: #dc3545;">Clear</button>
+  </div>
 
-        <div class="grid grid-cols-4 gap-2 mb-4">
-            <button onclick="calculate('+')" class="bg-blue-500 text-white py-2 rounded hover:bg-blue-600">+</button>
-            <button onclick="calculate('-')" class="bg-blue-500 text-white py-2 rounded hover:bg-blue-600">−</button>
-            <button onclick="calculate('*')" class="bg-blue-500 text-white py-2 rounded hover:bg-blue-600">×</button>
-            <button onclick="calculate('/')" class="bg-blue-500 text-white py-2 rounded hover:bg-blue-600">÷</button>
-        </div>
+  <div id="result"></div>
+</div>
 
-        <div class="text-center mt-4">
-            <p id="result" class="text-lg font-medium text-gray-800"></p>
-        </div>
-    </div>
+<script>
+  function calculate(operator) {
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    let result;
 
-    <script>
-        function calculate(operator) {
-            const num1 = parseFloat(document.getElementById('num1').value);
-            const num2 = parseFloat(document.getElementById('num2').value);
-            let result;
+    if (isNaN(num1) || isNaN(num2)) {
+      result = "Enter both numbers.";
+    } else {
+      switch (operator) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          result = num2 !== 0 ? (num1 / num2).toFixed(2) : "Cannot divide by zero.";
+          break;
+        case '%':
+          result = num2 !== 0 ? (num1 % num2) : "Cannot mod by zero.";
+          break;
+      }
+    }
 
-            if (isNaN(num1) || isNaN(num2)) {
-                result = "Please enter valid numbers.";
-            } else {
-                switch (operator) {
-                    case '+':
-                        result = num1 + num2;
-                        break;
-                    case '-':
-                        result = num1 - num2;
-                        break;
-                    case '*':
-                        result = num1 * num2;
-                        break;
-                    case '/':
-                        result = num2 !== 0 ? (num1 / num2).toFixed(2) : "Cannot divide by zero.";
-                        break;
-                    default:
-                        result = "Invalid operation.";
-                }
-            }
+    document.getElementById("result").textContent = `Result: ${result}`;
+  }
 
-            document.getElementById('result').textContent = `Result: ${result}`;
-        }
-    </script>
+  function square() {
+    const num1 = parseFloat(document.getElementById("num1").value);
+    let result = isNaN(num1) ? "Enter first number to square." : num1 * num1;
+    document.getElementById("result").textContent = `Result: ${result}`;
+  }
+
+  function clearFields() {
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    document.getElementById("result").textContent = "";
+  }
+</script>
+
 </body>
-
 </html>
